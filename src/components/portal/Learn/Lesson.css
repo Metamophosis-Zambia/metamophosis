@@ -9,3 +9,38 @@
     gap: 20px;
     min-height: 70vh;
 }
+
+.lesn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.lesn h2 {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.btnss {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.btnss .prev {
+    padding: 10px 20px;
+    background-color: rgb(104, 104, 253);
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+}
+
+.btnss .next {
+    padding: 10px 20px;
+    background-color: green;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+}
