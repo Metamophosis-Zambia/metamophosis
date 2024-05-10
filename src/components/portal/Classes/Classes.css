@@ -1,0 +1,101 @@
+.classes-div {
+    width: 100%;
+    min-height: 61vh;
+    background-color: #bbb;
+    padding: 10px;
+}
+
+.classes-nav ul {
+    background-color: rgb(5, 5, 68);
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.classes-nav hr {
+    border: 1px solid #fff;
+}
+
+.classes-main-content .ul {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.classes-main-content .ul .grad-btn {
+    /* padding: 25px; */
+    background-color: aliceblue;
+    color: #000;
+}
+
+.classes-main-content .ul .grad-btn button {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    padding: 20px;
+}
+
+.grade-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.grade-content a {
+    color: #000;
+    padding: 15px;
+    background-color: #bbb;
+}
+
+.none {
+    display: none;
+}
+
+.weather-data {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-data h2 {
+    font-size: 35px;
+}
+
+.weather-data h3 {
+    font-size: 25px;
+}
+
+.weather-data img {
+    width: 50px;
+    height: 50px;
+}
+
+.anbtn {
+    padding: 8px;
+    background-color: green;
+    border-radius: 10px;
+}
+
+.weather {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.forecast {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.other-weather {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+}

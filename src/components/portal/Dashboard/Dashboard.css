@@ -1,0 +1,187 @@
+.portal-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.portal-page-content {
+    padding: 30px;
+    width: 100%;
+}
+
+.nac {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: aliceblue;
+    gap: 15px;
+}
+
+
+.nac li {
+    padding: 10px;
+    background-color: #bbb;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.lec {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    /* background-color: aliceblue; */
+    gap: 15px;
+}
+
+.lec li {
+    background-color: #05a71b;
+    text-align: center;
+    border-radius: 10px;
+    width: 110px;
+}
+
+.lec li a {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lec li a img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.dic {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+.dic img {
+    width: 100%;
+    border: 1px solid;
+    min-height: 200px;
+    background-color: #bbb;
+}
+
+.dic button {
+    padding: 10px;
+    background-color: green;
+    border-radius: 18px;
+}
+
+.sac {
+    width: 100%;
+    height: 70vh;
+    border: 2px solid;
+}
+
+.sac img, .sac video {
+    width: 100%;
+    height: 100%;
+}
+
+.post-btn {
+    background-color: #05a71b;
+    padding: 8px 13px;
+    border-radius: 10px;
+}
+
+.market-prices {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0px;
+}
+
+.products-requested {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 14px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: #bbb;
+}
+
+.product img {
+    width: 120px;
+    height: 90px;
+}
+
+.product button {
+    border-radius: 10px;
+}
+
+.keys {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 9px;
+    margin-top: 20px;
+}
+
+.key {
+    display: flex;
+    gap: 5px;
+}
+
+.red {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+.orange {
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+}
+.yellow {
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+}
+.green {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+}
+
+.product button {
+    background-color: #05a71b;
+}
+
+.prices-div {
+    background-color: #bbb;
+    color: black;
+    padding: 7px 12px;
+    border-radius: 12px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+select, input {
+    padding: 14px;
+    border-radius: 8px;
+}
+
+@media  (min-width: 768px) {
+    .portal-content {
+        flex-direction: row;
+    }
+}

@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+._app {
+  margin: 0 auto;
+  border-radius: 20px;
+  padding-bottom: 17px;
+}
+
+@media screen and (min-width: 768px) {
+  .ti_tle {
+    width: 669px;
+    margin: 0 auto;
+  }
+
+  ._btn_1 {
+    /* margin: 0 auto; */
+    margin-left: 14em;
+    width: 100px;
+  }
+
+  /* .ul_list_1 {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10em;
+  } */
+
+  ._wide {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .prg {
+    width: 551px;
+    font-size: 18px;
+    font-family: 'poppins', sans-serif;
+  }
+
+  ._app {
+    height: 400px;
+  }
+}
