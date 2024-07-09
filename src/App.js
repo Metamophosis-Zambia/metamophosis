@@ -11,6 +11,9 @@ import LearnAnimalsPage from './components/portal/pages/LearnAnimals';
 import LearnCropsPage from './components/portal/pages/LearnCrops';
 import Footer from './components/Footer/Footer';
 import LessonPage from './components/portal/pages/Lesson';
+import Signin from './pages/signin/Signin'
+import Signup from './pages/signup/Signup'
+import SignUp from './pages/signup/Signup';
 
 
 function App() {
@@ -20,6 +23,11 @@ function App() {
 			<Routes>
 
 				<Route path="/" element={<Home />} />
+
+				
+				<Route path="/signin" element={<Signin />} />
+					<Route path="/signup" element={<SignUp />} />
+
 				<Route path="/dashboard" element={<ProtectedRoute />}> 
 					<Route path="/dashboard" element={<DashboardPage />} />
 					<Route path="/dashboard/learn" element={<LearnPage />} />
