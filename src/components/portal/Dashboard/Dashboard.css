@@ -1,31 +1,122 @@
 .portal-content {
     width: 100%;
-    /* background-color: yellow; */
     display: flex;
     flex-direction: column;
   }
   
   .portal-page-content {
+    position: relative;
     padding: 5%;
-    background-color: rgb(255, 255, 255);
     width: 100%;
+    overflow: hidden;
   }
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .overlay {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+  }
+  
+  .overlay h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
   
   .nac {
     display: flex;
     flex-direction: column;
     padding: 25px;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     gap: 15px;
+    flex-wrap: wrap;
   }
   
   .nac li {
+    display: flex;
+    justify-content: center;
     padding: 10px;
     background-color: #bbb;
     text-align: center;
     border-radius: 10px;
   }
   
+.dashboard-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    min-width: 200px;
+    margin: 1%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 8px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .dashboard-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dashboard-link img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .link-text {
+    text-align: center;
+  }
+  
+  .link-text h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .link-text p {
+    margin: 5px 0 0;
+    color: #666;
+  }
+  
+  @media (min-width: 768px) {
+    .portal-content {
+      flex-direction: row;
+    }
+  
+    .nac {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .dashboard-link {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .dashboard-link img {
+      margin-right: 15px;
+    }
+  
+    .link-text {
+      text-align: left;
+    }
+  }
   .lec {
     display: flex;
     /* background-color: pink; */
