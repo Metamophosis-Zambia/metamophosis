@@ -3,31 +3,30 @@
     /* background-color: yellow; */
     display: flex;
     flex-direction: column;
-}
-
-.portal-page-content {
+  }
+  
+  .portal-page-content {
     padding: 5%;
     background-color: rgb(255, 255, 255);
     width: 100%;
-}
-
-.nac {
+  }
+  
+  .nac {
     display: flex;
     flex-direction: column;
     padding: 25px;
     background-color: aliceblue;
     gap: 15px;
-}
-
-
-.nac li {
+  }
+  
+  .nac li {
     padding: 10px;
     background-color: #bbb;
     text-align: center;
     border-radius: 10px;
-}
-
-.lec {
+  }
+  
+  .lec {
     display: flex;
     /* background-color: pink; */
     justify-content: center;
@@ -35,9 +34,9 @@
     /* padding: 5px; */
     /* background-color: aliceblue; */
     /* gap: 15px; */
-}
-
-.lec li {
+  }
+  
+  .lec li {
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -47,177 +46,184 @@
     min-width: 300px;
     max-width: 700px;
     margin-bottom: 10%;
-}
-
-.learnCard ul {
+  }
+  
+  .learnCard ul {
     /* background-color: red; */
     padding: 10px 0 10px 0;
     display: flex;
     justify-content: space-between;
-}
-.learnCard ul h3 {
+  }
+  
+  .learnCard ul h3 {
     font-weight: 600;
     color: rgba(39, 36, 36, 0.863);
-}
-.learnCard ul p {
+  }
+  
+  .learnCard ul p {
     font-weight: 600;
     color: #1dc734;
-}
-
-
-.courseDetails p {
+  }
+  
+  .courseDetails p {
     font-size: 12px;
     color: rgba(77, 74, 74, 0.877);
-}
-/* .lec li a {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-
-.lec li p {
+  }
+  
+  /* .lec li a {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  } */
+  
+  .lec li p {
     height: 30px;
-}
-.lec li a img {
+  }
+  
+  .lec li a img {
     object-fit: cover;
     width: 100%;
     height: 200px;
-    border-radius: 10px;
-/*     
-    width: 90px;
-    height: 90px; */
+    border-radius: 14px;
+    /* width: 90px;
+      height: 90px; */
     /* border-radius: 50%; */
-}
-
-.dic {
+  }
+  
+  .dic {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 10px;
-}
-
-.dic img {
+  }
+  
+  .dic img {
     width: 100%;
     border: 1px solid;
     min-height: 200px;
     background-color: #bbb;
-}
-
-.dic button {
+  }
+  
+  .dic button {
     padding: 10px;
     background-color: green;
     border-radius: 18px;
-}
-
-.sac {
+  }
+  
+  .sac {
     width: 100%;
     height: 70vh;
     border: 2px solid;
-}
-
-.sac img, .sac video {
+  }
+  
+  .sac img,
+  .sac video {
     width: 100%;
     height: 100%;
-}
-
-.post-btn {
+  }
+  
+  .post-btn {
     background-color: #05a71b;
     padding: 8px 13px;
     border-radius: 10px;
-}
-
-.market-prices {
+  }
+  
+  .market-prices {
     display: flex;
     flex-direction: column;
     gap: 12px;
     margin: 20px 0px;
-}
-
-.products-requested {
+  }
+  
+  .products-requested {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
     gap: 14px;
-}
-
-.product {
+  }
+  
+  .product {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 10px;
     background-color: #bbb;
-}
-
-.product img {
+  }
+  
+  .product img {
     width: 120px;
     height: 90px;
-}
-
-.product button {
+  }
+  
+  .product button {
     border-radius: 10px;
-}
-
-.keys {
+  }
+  
+  .keys {
     display: flex;
     flex-direction: column;
     align-items: end;
     gap: 9px;
     margin-top: 20px;
-}
-
-.key {
+  }
+  
+  .key {
     display: flex;
     gap: 5px;
-}
-
-.red {
+  }
+  
+  .red {
     width: 20px;
     height: 20px;
     background-color: red;
-}
-
-.orange {
+  }
+  
+  .orange {
     width: 20px;
     height: 20px;
     background-color: orange;
-}
-.yellow {
+  }
+  
+  .yellow {
     width: 20px;
     height: 20px;
     background-color: yellow;
-}
-.green {
+  }
+  
+  .green {
     width: 20px;
     height: 20px;
     background-color: green;
-}
-
-.product button {
+  }
+  
+  .product button {
     background-color: #05a71b;
-}
-
-.prices-div {
+  }
+  
+  .prices-div {
     background-color: #bbb;
     color: black;
     padding: 7px 12px;
     border-radius: 12px;
-}
-
-.inputs {
+  }
+  
+  .inputs {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-top: 20px;
-}
-
-select, input {
+  }
+  
+  select,
+  input {
     padding: 14px;
     border-radius: 8px;
-}
-
-@media  (min-width: 768px) {
+  }
+  
+  @media (min-width: 768px) {
     .portal-content {
-        flex-direction: row;
+      flex-direction: row;
     }
-}
+  }
+  
