@@ -8,51 +8,74 @@ import chicken from '../images/chickenforsale.jpeg';
 import sheep from '../images/Sheep.jpeg';
 import rabbit from '../images/Rabbits.jpeg';
 
+const animals = [
+  {
+    path: "/dashboard/animals/pigs",
+    imgSrc: pig,
+    imgAlt: "pig",
+    title: "Pigs",
+    description: "Learn about the best practices for raising pigs, including feeding, housing, and health management."
+  },
+  {
+    path: "/dashboard/learn",
+    imgSrc: goat,
+    imgAlt: "goat",
+    title: "Goats",
+    description: "Discover techniques for goat farming, from breeding and feeding to disease prevention and milk production."
+  },
+  {
+    path: "/dashboard/learn/animals",
+    imgSrc: cattle,
+    imgAlt: "cattle",
+    title: "Cattle",
+    description: "Explore methods for effective cattle farming, covering nutrition, housing, and herd management."
+  },
+  {
+    path: "/dashboard/satimg",
+    imgSrc: rabbit,
+    imgAlt: "rabbit",
+    title: "Rabbits",
+    description: "Understand the essentials of rabbit farming, including housing, breeding, and health care."
+  },
+  {
+    path: "/dashboard/vitsup",
+    imgSrc: chicken,
+    imgAlt: "chicken",
+    title: "Poultry",
+    description: "Get insights into poultry farming, with tips on feeding, housing, and managing different types of poultry."
+  },
+  {
+    path: "/dashboard/marketplace",
+    imgSrc: sheep,
+    imgAlt: "sheep",
+    title: "Sheep",
+    description: "Learn the best practices for sheep farming, from shearing and lambing to disease control and nutrition."
+  }
+];
+
 const LearnAnimals = () => (
-	<div className="portal-content">
-		<MinNav />
-		<div className="portal-page-content">
-			<ul className="lec">
-			<li>
-					<Link to="/dashboard/animals/pigs" activestyle="true">
-						<img src={pig} alt="crop" />
-						Pigs
-					</Link>
-				</li>
-				<li>
-					<Link to="/dashboard/learn" activestyle="true">
-						<img src={goat} alt="crop" />
-						<p>Goats</p>
-					</Link>
-				</li>
-				<li>
-					<Link to="/dashboard/learn/animals" activestyle="true">
-						<img src={cattle} alt="crop" />
-						Cattle
-					</Link>
-				</li>
-				
-				<li>
-					<Link to="/dashboard/satimg" activestyle="true">
-						<img src={rabbit} alt="crop" />
-						Rabbits
-					</Link>
-				</li>
-				<li>
-					<Link to="/dashboard/vitsup" activestyle="true">
-						<img src={chicken} alt="crop" />
-						Poultry
-					</Link>
-				</li>
-				<li>
-					<Link to="/dashboard/marketplace" activestyle="true">
-						<img src={sheep} alt="crop" />
-						Sheep
-					</Link>
-				</li>
-			</ul>
-		</div>
-	</div>
+  <div className="portal-content">
+    <MinNav />
+    <div className="portal-page-content">
+      <ul className="lec">
+        {animals.map((animal, index) => (
+          <li key={index}>
+            <Link to={animal.path} activestyle="true">
+              <img src={animal.imgSrc} alt={animal.imgAlt} />
+            </Link>
+            <div className='learnCard'>
+              <ul>
+                <h3>{animal.title}</h3>
+              </ul>
+              <li className='courseDetails'>
+                <p>{animal.description}</p>
+              </li>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
 );
 
 export default LearnAnimals;
