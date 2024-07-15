@@ -30,7 +30,8 @@ function Homes() {
 								Get started
 							</NavLink>
 						</button>
-						<div className="flex md:flex-col ">
+
+						{/* <div className="flex md:flex-col ">
 							<p className="text-white font-bold mt-4 px-14">
 								DOWNLOAD OUR APP
 								<ul className="mt-3 gap-8 flex flex-col lg:flex-row">
@@ -42,7 +43,8 @@ function Homes() {
 									</li>
 								</ul>
 							</p>
-						</div>
+						</div> */}
+
 					</div>
 				</div>
 			</div>

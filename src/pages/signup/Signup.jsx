@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-// import { signUp, getCurrentUser } from "../../apicalls/authCalls";
-import { useNavigate } from "react-router-dom";
-// import { toast, Toaster } from 'react-hot-toast';
-// import { setReferredBenefits } from '../../apicalls/referral'
-// import mixpanel from 'mixpanel-browser';
+import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
+import { auth, db } from "../../firebase/config"; // Ensure this is correctly configured
+import "./SignUp.css";
 
 const SignUp = () => {
     const navigate = useNavigate();
@@ -16,75 +15,89 @@ const SignUp = () => {
     const [confirmPassword, setConfirmPassword] = useState("");
     const [referralCode, setReferralCode] = useState("");
     const [hasReferral, setHasReferral] = useState(false);
+    const [error, setError] = useState("");
 
-    const handleSubmit = async(e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        
 
-    }
+        if (password !== confirmPassword) {
+            setError("Passwords do not match");
+            return;
+        }
 
-  return (
-    <div className="auth-container">
-        <div className="card2 padding-20">
-        <form className="sign-form" onSubmit={(e) => handleSubmit(e)}>
-            <h1>Sign Up</h1>
-            <div className="flex-row">
-                <div className="form-group">
-                    <label htmlFor="firstName">First Name</label>
-                    <input type="text" id="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="lastName">Last Name</label>
-                    <input type="text" id="lastName" value={lastName} onChange={(e) => setLastName(e.target.value)} />
-                </div>
-            </div>
-            
-            <div className="form-group">
-                <label htmlFor="confirmPassword">Artist Name</label>
-                <input type="password" id="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
-            </div>
-            <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-            </div>
-            <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            </div>
-            <div className="form-group">
-                <label htmlFor="confirmPassword">Confirm Password</label>
-                <input type="password" id="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
-            </div>
-            <div class="checkbox-container">
-                <input type="checkbox" id="hasReferral" onChange={(e) => setHasReferral(e.target.checked)} />
-                <label for="myCheckbox1">I have a referral code</label>
-            </div>
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
 
-            {
-                hasReferral && (
-                    <div className="form-group">
-                        <label htmlFor="referralCode">Referal code</label>
-                        <input type="text" id="referralCode" value={referralCode} onChange={(e) => setReferralCode(e.target.value)} />
+            await setDoc(doc(db, "profiles", user.uid), {
+                firstName,
+                lastName,
+                artistName,
+                email,
+                referralCode: hasReferral ? referralCode : null,
+            });
+
+            console.log("User signed up and profile created:", user);
+            navigate("/dashboard");
+        } catch (error) {
+            console.error("Error signing up:", error);
+            setError(error.message);
+        }
+    };
+
+    return (
+        <div className="auth-container">
+            <div className="card2 padding-20">
+                <form className="sign-form" onSubmit={handleSubmit}>
+                    <h1>Sign Up</h1>
+                    {error && <p className="error">{error}</p>}
+                    <div className="flex-row">
+                        <div className="form-group">
+                            <label htmlFor="firstName">First Name</label>
+                            <input type="text" id="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="lastName">Last Name</label>
+                            <input type="text" id="lastName" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+                        </div>
                     </div>
-                )
-            }
-            <p className="agreement-text">By continuing you agree to Uzuri Space's <NavLink to="/terms-and-conditions" className="termsLink">Terms and Conditions</NavLink> and <NavLink to="/privacypolicy" className="termsLink">Privacy Policy</NavLink>.</p>
-            <div className="form-group">
-                <button type="submit">Sign Up</button>
+                    <div className="form-group">
+                        <label htmlFor="artistName">Artist Name</label>
+                        <input type="text" id="artistName" value={artistName} onChange={(e) => setArtistName(e.target.value)} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="email">Email</label>
+                        <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="password">Password</label>
+                        <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+                    </div>
+                    <div className="checkbox-container">
+                        <input type="checkbox" id="hasReferral" onChange={(e) => setHasReferral(e.target.checked)} />
+                        <label htmlFor="hasReferral">I have a referral code</label>
+                    </div>
+                    {hasReferral && (
+                        <div className="form-group">
+                            <label htmlFor="referralCode">Referral code</label>
+                            <input type="text" id="referralCode" value={referralCode} onChange={(e) => setReferralCode(e.target.value)} />
+                        </div>
+                    )}
+                    <p className="agreement-text">
+                        By continuing you agree to Metamorphosis's <NavLink to="/terms-and-conditions" className="termsLink">Terms and Conditions</NavLink> and <NavLink to="/privacypolicy" className="termsLink">Privacy Policy</NavLink>.
+                    </p>
+                    <div className="form-group">
+                        <button type="submit">Sign Up</button>
+                    </div>
+                    <p className="auth-p">Already have an account? <NavLink to='/signin'>Log In</NavLink></p>
+                </form>
             </div>
-            <p className="auth-p">Already have an account? <NavLink to='/signin'>Log In</NavLink></p>
-            {/* <Toaster toastOptions={{
-          style: {
-            background: 'red',
-            color: '#fff',
-          },
-        }}/> */}
-
-        </form>
         </div>
-    </div>
-        
-  );
+    );
 };
 
 export default SignUp;
