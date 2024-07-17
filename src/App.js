@@ -15,8 +15,12 @@ import Signin from './pages/signin/Signin'
 import Signup from './pages/signup/Signup'
 import SignUp from './pages/signup/Signup';
 
+export const isAuthenticated = () => {
+	return !!localStorage.getItem('authToken');
+  };
 
 function App() {
+	
 	return (
 		<Router>
 			{/* <Navbar /> */}

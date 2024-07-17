@@ -1,3 +1,4 @@
+/* General styles for the lesson container */
 .lesson {
     display: flex;
     flex-direction: column;
@@ -8,39 +9,108 @@
     height: 100%;
     gap: 20px;
     min-height: 70vh;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Styles for the lesson header */
 .lesn {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .lesn h2 {
     font-weight: bold;
-    font-size: 25px;
+    font-size: 1.5em;
+    color: #333;
 }
 
+.lesn h3 {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Styles for the audio player */
+audio {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the buttons */
 .btnss {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    max-width: 600px;
+    gap: 10px;
+}
+
+.btnss .prev, .btnss .next {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .btnss .prev {
-    padding: 10px 20px;
-    background-color: rgb(104, 104, 253);
-    border-radius: 10px;
-    border: none;
-    color: #fff;
+    background-color: #007bff;
+}
+
+.btnss .prev:hover {
+    background-color: #0056b3;
 }
 
 .btnss .next {
-    padding: 10px 20px;
-    background-color: green;
-    border-radius: 10px;
-    border: none;
-    color: #fff;
+    background-color: #28a745;
+}
+
+.btnss .next:hover {
+    background-color: #218838;
+}
+
+.btnss .next.done {
+    background-color: #6c757d;
+}
+
+.btnss .next.done:hover {
+    background-color: #5a6268;
+}
+
+/* Styles for the notes section */
+.notes {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notes h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.notes ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.notes li {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 5px;
 }

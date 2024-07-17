@@ -1,68 +1,116 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
 .auth-container {
-    padding: 5%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f5f5, #e6e6e6);
 }
 
-.auth-container .card2 {
-    min-width: 280px;
-}
-
-.flex-row {
-    display: flex;
-    align-self: center;
+.card2 {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
     width: 100%;
-    gap: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.sign-form {
-    max-width: 600px;
+.card2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.auth-form h1 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.auth-form .form-group {
+    margin-bottom: 15px;
+}
+
+.auth-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.auth-form .form-group input {
     width: 100%;
     padding: 10px;
-    box-shadow: 2px 2px 5px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    background-color: #e1e0e0;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 15px;
+    transition: border 0.3s, box-shadow 0.3s;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.auth-form .form-group input:focus {
+    border-color: #008000;
+    box-shadow: 0 0 8px rgba(0, 128, 0, 0.25);
+}
+
+.auth-button {
     width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #008000;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.sign-form p {
-    text-align: center !important;
+.auth-button:hover {
+    background-color: #006400;
+    transform: translateY(-3px);
 }
 
-.auth-p a {
-    color: #007bff;
+.auth-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555555;
 }
 
-.padding-20 {
-    padding: 20px;
-}
-.termsLink {
+.auth-link {
+    color: #007BFF;
     text-decoration: none;
-    color: blue;
-  }
-  .agreement-text {
-    font-size: 0.8rem; /* Makes the text smaller */
-    padding: 10px; /* Adds padding around the text */
-    line-height: 1.4; /* Optional: Improves readability */
-  }
-@media screen and (min-width: 768px) {
-    .auth-container .card2 {
-        min-width: 400px;
-        display: flex;
-        justify-content: center;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .auth-container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card2 {
+        padding: 15px;
     }
     
+    .auth-form .form-group input {
+        padding: 8px;
+    }
+
+    .auth-button {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
 }
