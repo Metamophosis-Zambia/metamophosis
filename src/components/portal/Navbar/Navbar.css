@@ -1,3 +1,5 @@
+
+
 .user-container {
     display: flex;
     flex-direction: column;
@@ -13,6 +15,11 @@
     background-color: #000;
 }
 
+.logo > img {
+    object-fit: contain;
+    position: relative;
+    width: 6rem
+}
 .portal-navigation {
     padding: 2.5%;
     background-color: rgb(7, 161, 15);

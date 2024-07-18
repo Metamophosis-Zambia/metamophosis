@@ -17,30 +17,30 @@ const courses = [
     price: "$5.00",
     description: "Practices and techniques used to raise and care for animals in a sustainable and efficient manner"
   },
-  {
-    path: "/dashboard/learn/crops",
-    imgSrc: crop,
-    imgAlt: "crop",
-    title: "Crop Management",
-    price: "$5.00",
-    description: "Practices and techniques used to ensure higher crop yields"
-  },
-  {
-    path: "/dashboard/cropman",
-    imgSrc: sus,
-    imgAlt: "sustainable agriculture",
-    title: "Sustainable Agriculture",
-    price: "$5.00",
-    description: "Eco-friendly and preservative farming that aims to produce more crops in small land spaces and reusability"
-  },
-  {
-    path: "/dashboard/satimg",
-    imgSrc: csa,
-    imgAlt: "climate smart agriculture",
-    title: "Climate Smart Agriculture",
-    price: "$5.00",
-    description: "Leveraging technology to make agriculture more efficient and sustainable."
-  }
+  // {
+  //   path: "/dashboard/learn/crops",
+  //   imgSrc: crop,
+  //   imgAlt: "crop",
+  //   title: "Crop Management",
+  //   price: "$5.00",
+  //   description: "Practices and techniques used to ensure higher crop yields"
+  // },
+  // {
+  //   path: "/dashboard/cropman",
+  //   imgSrc: sus,
+  //   imgAlt: "sustainable agriculture",
+  //   title: "Sustainable Agriculture",
+  //   price: "$5.00",
+  //   description: "Eco-friendly and preservative farming that aims to produce more crops in small land spaces and reusability"
+  // },
+  // {
+  //   path: "/dashboard/satimg",
+  //   imgSrc: csa,
+  //   imgAlt: "climate smart agriculture",
+  //   title: "Climate Smart Agriculture",
+  //   price: "$5.00",
+  //   description: "Leveraging technology to make agriculture more efficient and sustainable."
+  // }
 ];
 
 const Learn = () => (

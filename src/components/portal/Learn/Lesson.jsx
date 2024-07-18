@@ -77,12 +77,17 @@ const LessonContent = ({ lesson, completeModule, redoModule }) => {
   const audioRef = useRef(null);
 
   useEffect(() => {
-    
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.load();
     }
   }, [lesson]);
+
+  const handlePlayAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  };
 
   return (
     <div className="lesson">
@@ -91,10 +96,10 @@ const LessonContent = ({ lesson, completeModule, redoModule }) => {
         <h2>{currentLesson.title}</h2>
       </div>
       <audio controls ref={audioRef}>
-        <source src={currentLesson.recording} type="audio/ogg" />
-        <source src={currentLesson.recording} type="audio/mpeg" />
+        <source src={currentLesson.recording} type="audio/mp4" />
         Your browser does not support the audio tag.
       </audio>
+      <button onClick={handlePlayAudio}>Play Audio</button>
       <div className="btnss">
         {lesson > 1 && <button className="prev" onClick={redoModule}>Previous Lesson</button>}
         {lesson < lessonsData.length ? (

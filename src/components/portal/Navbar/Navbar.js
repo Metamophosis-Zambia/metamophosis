@@ -4,7 +4,7 @@ import { getAuth, signOut } from 'firebase/auth';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import logo from '../images/icon.png';
+import logo from './METAMORPHOSIS_LOGO.png';
 
 const menu = <FontAwesomeIcon icon={faBars} />;
 const close = <FontAwesomeIcon icon={faTimes} />;
@@ -51,10 +51,12 @@ function InNavBar() {
         <nav className="nav">
             <div className="main-nav" ref={navRef4}>
                 <div>
-                    <NavLink to="/" activestyle="true">
+                    <NavLink to="/dashboard" activestyle="true">
                         <h2 className="logo">
-                            Meta
-                            <span>mophosis</span>
+                           <img src={logo} />
+                           
+                            {/* Meta
+                            <span>mophosis</span> */}
                         </h2>
                     </NavLink>
                 </div>

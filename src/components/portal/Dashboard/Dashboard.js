@@ -16,7 +16,7 @@ const Dashboard = () => (
         <ul className="nac">
           <li>
             <Link to="/dashboard/learn" className="dashboard-link">
-              <img src="https://via.placeholder.com/150" alt="Knowledge Base" />
+              {/* <img src="https://via.placeholder.com/150" alt="Knowledge Base" /> */}
               <div className="link-text">
                 <h3>Knowledge Base</h3>
                 <p>Expand your knowledge with our extensive resources.</p>
@@ -25,7 +25,7 @@ const Dashboard = () => (
           </li>
           <li>
             <Link to="/dashboard/diagnosis" className="dashboard-link">
-              <img src="https://via.placeholder.com/150" alt="Livestock Farming Services" />
+              {/* <img src="https://via.placeholder.com/150" alt="Livestock Farming Services" /> */}
               <div className="link-text">
                 <h3>Livestock Farming Services</h3>
                 <p>Get expert advice and services for your livestock.</p>
@@ -34,7 +34,7 @@ const Dashboard = () => (
           </li>
           <li>
             <Link to="/dashboard/cropman" className="dashboard-link">
-              <img src="https://via.placeholder.com/150" alt="Consultation Services" />
+              {/* <img src="https://via.placeholder.com/150" alt="Consultation Services" /> */}
               <div className="link-text">
                 <h3>Consultation Services</h3>
                 <p>Consult with our experts for better farming practices.</p>
