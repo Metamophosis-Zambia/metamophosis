@@ -16,41 +16,41 @@ const animals = [
     title: "Pigs",
     description: "Learn about the best practices for raising pigs, including feeding, housing, and health management."
   },
-  {
-    path: "/dashboard/learn",
-    imgSrc: goat,
-    imgAlt: "goat",
-    title: "Goats",
-    description: "Discover techniques for goat farming, from breeding and feeding to disease prevention and milk production."
-  },
-  {
-    path: "/dashboard/learn/animals",
-    imgSrc: cattle,
-    imgAlt: "cattle",
-    title: "Cattle",
-    description: "Explore methods for effective cattle farming, covering nutrition, housing, and herd management."
-  },
-  {
-    path: "/dashboard/satimg",
-    imgSrc: rabbit,
-    imgAlt: "rabbit",
-    title: "Rabbits",
-    description: "Understand the essentials of rabbit farming, including housing, breeding, and health care."
-  },
-  {
-    path: "/dashboard/vitsup",
-    imgSrc: chicken,
-    imgAlt: "chicken",
-    title: "Poultry",
-    description: "Get insights into poultry farming, with tips on feeding, housing, and managing different types of poultry."
-  },
-  {
-    path: "/dashboard/marketplace",
-    imgSrc: sheep,
-    imgAlt: "sheep",
-    title: "Sheep",
-    description: "Learn the best practices for sheep farming, from shearing and lambing to disease control and nutrition."
-  }
+  // {
+  //   path: "/dashboard/learn",
+  //   imgSrc: goat,
+  //   imgAlt: "goat",
+  //   title: "Goats",
+  //   description: "Discover techniques for goat farming, from breeding and feeding to disease prevention and milk production."
+  // },
+  // {
+  //   path: "/dashboard/learn/animals",
+  //   imgSrc: cattle,
+  //   imgAlt: "cattle",
+  //   title: "Cattle",
+  //   description: "Explore methods for effective cattle farming, covering nutrition, housing, and herd management."
+  // },
+  // {
+  //   path: "/dashboard/satimg",
+  //   imgSrc: rabbit,
+  //   imgAlt: "rabbit",
+  //   title: "Rabbits",
+  //   description: "Understand the essentials of rabbit farming, including housing, breeding, and health care."
+  // },
+  // {
+  //   path: "/dashboard/vitsup",
+  //   imgSrc: chicken,
+  //   imgAlt: "chicken",
+  //   title: "Poultry",
+  //   description: "Get insights into poultry farming, with tips on feeding, housing, and managing different types of poultry."
+  // },
+  // {
+  //   path: "/dashboard/marketplace",
+  //   imgSrc: sheep,
+  //   imgAlt: "sheep",
+  //   title: "Sheep",
+  //   description: "Learn the best practices for sheep farming, from shearing and lambing to disease control and nutrition."
+  // }
 ];
 
 const LearnAnimals = () => (

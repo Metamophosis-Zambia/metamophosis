@@ -14,9 +14,14 @@ import LessonPage from './components/portal/pages/Lesson';
 import Signin from './pages/signin/Signin'
 import Signup from './pages/signup/Signup'
 import SignUp from './pages/signup/Signup';
+import About from './components/pages/about';
 
+export const isAuthenticated = () => {
+	return !!localStorage.getItem('authToken');
+  };
 
 function App() {
+	
 	return (
 		<Router>
 			{/* <Navbar /> */}
@@ -27,8 +32,9 @@ function App() {
 				
 				<Route path="/signin" element={<Signin />} />
 					<Route path="/signup" element={<SignUp />} />
-
+					<Route path="/about" element={<About />} />
 				<Route path="/dashboard" element={<ProtectedRoute />}> 
+				
 					<Route path="/dashboard" element={<DashboardPage />} />
 					<Route path="/dashboard/learn" element={<LearnPage />} />
 					<Route path="/dashboard/learn/crops" element={<LearnCropsPage />} />

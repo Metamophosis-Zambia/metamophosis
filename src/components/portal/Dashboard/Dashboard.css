@@ -1,229 +1,319 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
 .portal-content {
-    width: 100%;
-    /* background-color: yellow; */
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.portal-page-content {
+  position: relative;
+  padding: 5%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+}
+
+.overlay h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.nac {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nac li {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #bbb;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.dashboard-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  min-width: 200px;
+  margin: 1%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dashboard-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-link img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.link-text {
+  text-align: center;
+}
+
+.link-text h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.link-text p {
+  margin: 5px 0 0;
+  color: #666;
+}
+
+@media (min-width: 768px) {
+  .portal-content {
+    flex-direction: row;
   }
-  
-  .portal-page-content {
-    padding: 5%;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-  }
-  
+
   .nac {
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-    background-color: aliceblue;
-    gap: 15px;
-  }
-  
-  .nac li {
-    padding: 10px;
-    background-color: #bbb;
-    text-align: center;
-    border-radius: 10px;
-  }
-  
-  .lec {
-    display: flex;
-    /* background-color: pink; */
+    flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
-    /* padding: 5px; */
-    /* background-color: aliceblue; */
-    /* gap: 15px; */
   }
-  
-  .lec li {
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
+
+  .dashboard-link {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .dashboard-link img {
+    margin-right: 15px;
+  }
+
+  .link-text {
     text-align: left;
-    border-radius: 10px;
-    width: 100%;
-    min-width: 300px;
-    max-width: 700px;
-    margin-bottom: 10%;
   }
-  
-  .learnCard ul {
-    /* background-color: red; */
-    padding: 10px 0 10px 0;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .learnCard ul h3 {
-    font-weight: 600;
-    color: rgba(39, 36, 36, 0.863);
-  }
-  
-  .learnCard ul p {
-    font-weight: 600;
-    color: #1dc734;
-  }
-  
-  .courseDetails p {
-    font-size: 12px;
-    color: rgba(77, 74, 74, 0.877);
-  }
-  
-  /* .lec li a {
-      padding: 15px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  } */
-  
-  .lec li p {
-    height: 30px;
-  }
-  
-  .lec li a img {
-    object-fit: cover;
-    width: 100%;
-    height: 200px;
-    border-radius: 14px;
-    /* width: 90px;
-      height: 90px; */
-    /* border-radius: 50%; */
-  }
-  
-  .dic {
-    display: flex;
+}
+
+.lec {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3%;
+}
+
+.lec li {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-radius: 10px;
+  width: 100%;
+  min-width: 300px;
+  max-width: 700px;
+  margin-bottom: 10%;
+}
+
+.learnCard ul {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.learnCard ul h3 {
+  font-weight: 600;
+  color: rgba(39, 36, 36, 0.863);
+}
+
+.learnCard ul p {
+  font-weight: 600;
+  color: #1dc734;
+}
+
+.courseDetails p {
+  font-size: 12px;
+  color: rgba(77, 74, 74, 0.877);
+}
+
+.lec li a img {
+  object-fit: cover;
+  width: 100%;
+  height: 24em;
+  border-radius: 14px;
+}
+
+.dic {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+.dic img {
+  width: 100%;
+  border: 1px solid;
+  min-height: 200px;
+  background-color: #bbb;
+}
+
+.dic button {
+  padding: 10px;
+  background-color: green;
+  border-radius: 18px;
+}
+
+.sac {
+  width: 100%;
+  height: 70vh;
+  border: 2px solid;
+}
+
+.sac img, .sac video {
+  width: 100%;
+  height: 100%;
+}
+
+.post-btn {
+  background-color: #05a71b;
+  padding: 8px 13px;
+  border-radius: 10px;
+}
+
+.market-prices {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.products-requested {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 14px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  background-color: #bbb;
+}
+
+.product img {
+  width: 120px;
+  height: 90px;
+}
+
+.product button {
+  border-radius: 10px;
+  background-color: #05a71b;
+}
+
+.keys {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+.key {
+  display: flex;
+  gap: 5px;
+}
+
+.red {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+}
+
+.orange {
+  width: 20px;
+  height: 20px;
+  background-color: orange;
+}
+
+.yellow {
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+}
+
+.green {
+  width: 20px;
+  height: 20px;
+  background-color: green;
+}
+
+.prices-div {
+  background-color: #bbb;
+  color: black;
+  padding: 7px 12px;
+  border-radius: 12px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+select, input {
+  padding: 14px;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .portal-content {
     flex-direction: column;
-    gap: 20px;
-    padding: 10px;
   }
-  
-  .dic img {
-    width: 100%;
-    border: 1px solid;
-    min-height: 200px;
-    background-color: #bbb;
-  }
-  
-  .dic button {
-    padding: 10px;
-    background-color: green;
-    border-radius: 18px;
-  }
-  
-  .sac {
-    width: 100%;
-    height: 70vh;
-    border: 2px solid;
-  }
-  
-  .sac img,
-  .sac video {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .post-btn {
-    background-color: #05a71b;
-    padding: 8px 13px;
-    border-radius: 10px;
-  }
-  
-  .market-prices {
-    display: flex;
+
+  .nac {
     flex-direction: column;
-    gap: 12px;
-    margin: 20px 0px;
   }
-  
-  .products-requested {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    gap: 14px;
-  }
-  
-  .product {
-    display: flex;
+
+  .dashboard-link {
     flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    background-color: #bbb;
   }
-  
-  .product img {
-    width: 120px;
-    height: 90px;
+
+  .dashboard-link img {
+    margin-right: 0;
+    margin-bottom: 15px;
   }
-  
-  .product button {
-    border-radius: 10px;
+
+  .link-text {
+    text-align: center;
   }
-  
-  .keys {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    gap: 9px;
-    margin-top: 20px;
-  }
-  
-  .key {
-    display: flex;
-    gap: 5px;
-  }
-  
-  .red {
-    width: 20px;
-    height: 20px;
-    background-color: red;
-  }
-  
-  .orange {
-    width: 20px;
-    height: 20px;
-    background-color: orange;
-  }
-  
-  .yellow {
-    width: 20px;
-    height: 20px;
-    background-color: yellow;
-  }
-  
-  .green {
-    width: 20px;
-    height: 20px;
-    background-color: green;
-  }
-  
-  .product button {
-    background-color: #05a71b;
-  }
-  
-  .prices-div {
-    background-color: #bbb;
-    color: black;
-    padding: 7px 12px;
-    border-radius: 12px;
-  }
-  
-  .inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
-  select,
-  input {
-    padding: 14px;
-    border-radius: 8px;
-  }
-  
-  @media (min-width: 768px) {
-    .portal-content {
-      flex-direction: row;
-    }
-  }
-  
+}
